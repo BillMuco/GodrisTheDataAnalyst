@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bill Godris Muco | Data Scientist & Analyst</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
     <!-- SEO Optimization -->
     <meta name="description" content="Portfolio of Bill Godris Muco, a Data Scientist & Analyst specializing in Power BI, SQL, and AI solutions.">
     <meta property="og:title" content="Bill Godris Muco - Data Scientist & Analyst">
@@ -13,15 +14,18 @@
     <meta property="og:image" content="https://github.com/BillMuco/Portfolio/blob/main/GitHub%20Profile%20Picture.jpg">
     <meta property="og:url" content="https://billmuco.github.io/Portfolio/">
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 text-gray-900">
     
     <!-- Navigation Bar -->
-    <nav class="bg-white shadow-md p-4 mb-4">
-        <ul class="flex justify-center space-x-6">
+    <nav class="bg-white shadow-md p-4 mb-4 flex justify-between items-center">
+        <ul class="flex space-x-6">
             <li><a href="#about" class="text-blue-600 hover:underline">About</a></li>
             <li><a href="#portfolio" class="text-blue-600 hover:underline">Portfolio</a></li>
             <li><a href="#contact" class="text-blue-600 hover:underline">Contact</a></li>
         </ul>
+        <button id="theme-toggle" class="bg-gray-200 p-2 rounded text-gray-800">
+            🌙 Dark Mode
+        </button>
     </nav>
 
     <div class="container mx-auto p-8 flex flex-col md:flex-row">
@@ -44,55 +48,98 @@
             <!-- Fraud Detection Project -->
             <section class="mb-8">
                 <h3 class="text-2xl font-semibold">Fraud Detection in Financial Transactions</h3>
-                <p class="text-gray-600 mb-4">This project identifies fraudulent transactions using data analysis and machine learning techniques. It provides insights into high-risk transaction types and anomaly detection.</p>
-                <p class="text-gray-600 mb-4">Explore the project on GitHub: <a href="https://github.com/BillMuco/Fraud-Detection-Simulation" class="text-blue-600 hover:underline">Fraud Detection Simulation</a></p>
-                
-                <div class="mb-4">
-                    <h4 class="text-xl font-semibold">Fraud Detection Dashboard</h4>
-                    <img src="Fraud%20Detection%20Dashboard.png" alt="Fraud Detection Dashboard" class="rounded-xl" loading="lazy">
-                </div>
-                <div class="mb-4">
-                    <h4 class="text-xl font-semibold">Anomaly Detection</h4>
-                    <img src="Anomaly%20Detection.png" alt="Anomaly Detection" class="rounded-xl" loading="lazy">
-                </div>
-                <div class="mb-4">
-                    <h4 class="text-xl font-semibold">Fraud vs. Non-Fraud Transaction Count</h4>
-                    <img src="Fraud%20Vs.%20Non-Fraud%20Transaction%20Count.png" alt="Fraud vs. Non-Fraud Transactions" class="rounded-xl" loading="lazy">
-                </div>
-                <div class="mb-4">
-                    <h4 class="text-xl font-semibold">High-Risk Transaction Types</h4>
-                    <img src="High-Risk%20Transaction%20Types.png" alt="High-Risk Transaction Types" class="rounded-xl" loading="lazy">
-                </div>
-                <div class="mb-4">
-                    <h4 class="text-xl font-semibold">Transaction Amount Distribution</h4>
-                    <img src="Transaction%20Amount%20Distribution.png" alt="Transaction Amount Distribution" class="rounded-xl" loading="lazy">
-                </div>
+                <p class="text-gray-600 mb-4">This project identifies fraudulent transactions using data analysis and machine learning techniques.</p>
+                <a href="https://github.com/BillMuco/Fraud-Detection-Simulation" class="text-blue-600 hover:underline">Fraud Detection Simulation</a>
+                <img src="Fraud%20Detection%20Dashboard.png" alt="Fraud Detection Dashboard" class="rounded-xl mt-4" loading="lazy">
             </section>
 
             <!-- Sales Dashboard Simulation Project -->
             <section class="mb-8">
                 <h3 class="text-2xl font-semibold">Sales Dashboard Simulation</h3>
-                <p class="text-gray-600 mb-4">This project analyzes sales performance across various regions, product categories, and profit margins.</p>
-                <p class="text-gray-600 mb-4">Explore the project on GitHub: <a href="https://github.com/BillMuco/Sales-Dashboard" class="text-blue-600 hover:underline">Sales Dashboard Simulation</a></p>
-                
-                <div class="mb-4">
-                    <h4 class="text-xl font-semibold">Regional Sales Distribution</h4>
-                    <img src="Regional%20Sales%20Distribution.png" alt="Regional Sales Distribution" class="rounded-xl" loading="lazy">
-                </div>
-                <div class="mb-4">
-                    <h4 class="text-xl font-semibold">Monthly Sales Trends</h4>
-                    <img src="Monthly%20sales%20trends.png" alt="Monthly Sales Trends" class="rounded-xl" loading="lazy">
-                </div>
-                <div class="mb-4">
-                    <h4 class="text-xl font-semibold">Profit Margins by Category</h4>
-                    <img src="Profit%20Margins.png" alt="Profit Margins by Category" class="rounded-xl" loading="lazy">
-                </div>
-                <div class="mb-4">
-                    <h4 class="text-xl font-semibold">Top Selling Products & Profit Margins</h4>
-                    <img src="Profits%20Margins%20Vs%20Top%20selling%20Products.png" alt="Top Selling Products & Profit Margins" class="rounded-xl" loading="lazy">
-                </div>
+                <p class="text-gray-600 mb-4">This project analyzes sales performance across various regions and product categories.</p>
+                <a href="https://github.com/BillMuco/Sales-Dashboard" class="text-blue-600 hover:underline">Sales Dashboard Simulation</a>
+                <img src="Regional%20Sales%20Distribution.png" alt="Regional Sales Distribution" class="rounded-xl mt-4" loading="lazy">
             </section>
         </main>
     </div>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="w-full md:w-2/3 mx-auto p-8 bg-white rounded-2xl shadow-lg">
+        <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+        
+        <form id="contact-form" class="space-y-4">
+            <div>
+                <label class="block text-gray-700">Name:</label>
+                <input type="text" id="name" class="w-full p-2 border rounded" required>
+                <p class="text-red-500 text-sm hidden" id="name-error">Please enter your name.</p>
+            </div>
+
+            <div>
+                <label class="block text-gray-700">Email:</label>
+                <input type="email" id="email" class="w-full p-2 border rounded" required>
+                <p class="text-red-500 text-sm hidden" id="email-error">Please enter a valid email.</p>
+            </div>
+
+            <div>
+                <label class="block text-gray-700">Message:</label>
+                <textarea id="message" class="w-full p-2 border rounded" required></textarea>
+                <p class="text-red-500 text-sm hidden" id="message-error">Please enter a message.</p>
+            </div>
+
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Send Message</button>
+        </form>
+        
+        <p id="success-message" class="text-green-600 text-lg mt-4 hidden">Message sent successfully!</p>
+    </section>
+
+    <!-- JavaScript for Theme Toggle -->
+    <script>
+        const themeToggle = document.getElementById("theme-toggle");
+        const body = document.body;
+
+        if (localStorage.getItem("theme") === "dark") {
+            body.classList.add("dark", "bg-gray-900", "text-white");
+            themeToggle.textContent = "☀️ Light Mode";
+        }
+
+        themeToggle.addEventListener("click", () => {
+            if (body.classList.contains("dark")) {
+                body.classList.remove("dark", "bg-gray-900", "text-white");
+                themeToggle.textContent = "🌙 Dark Mode";
+                localStorage.setItem("theme", "light");
+            } else {
+                body.classList.add("dark", "bg-gray-900", "text-white");
+                themeToggle.textContent = "☀️ Light Mode";
+                localStorage.setItem("theme", "dark");
+            }
+        });
+    </script>
+
+    <!-- JavaScript for Contact Form Validation -->
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let message = document.getElementById("message").value.trim();
+            
+            let nameError = document.getElementById("name-error");
+            let emailError = document.getElementById("email-error");
+            let messageError = document.getElementById("message-error");
+            let successMessage = document.getElementById("success-message");
+
+            let isValid = name && email.includes("@") && message;
+
+            nameError.classList.toggle("hidden", !!name);
+            emailError.classList.toggle("hidden", email.includes("@"));
+            messageError.classList.toggle("hidden", !!message);
+
+            if (isValid) {
+                successMessage.classList.remove("hidden");
+                this.reset();
+            }
+        });
+    </script>
 </body>
 </html>
