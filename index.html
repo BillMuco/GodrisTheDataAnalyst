@@ -78,31 +78,11 @@
                 <img src="Regional%20Sales%20Distribution.png" alt="Regional Sales Distribution" class="rounded-xl mb-4">
                 <img src="Distribution%20of%20Property%20Sizes.png" alt="Distribution of Property Sizes" class="rounded-xl mb-4">
                 <img src="Average%20Price%20By%20City.png" alt="Average Price By City" class="rounded-xl mb-4">
+                <img src="GIS%20Traffic%20Flow%20interactive%20Map%20ArcGIS.png" alt="GIS Traffic Flow Interactive Map" class="rounded-xl mb-4">
+                <img src="Regional%20Business%20activity%20bubble%20map%20based%20on%20traffic%20Flow.png" alt="Regional Business Activity Bubble Map" class="rounded-xl mb-4">
+                <img src="Traffic%20Flow%20Heatmap%20by%20Longitude%20and%20Latitude.png" alt="Traffic Flow Heatmap" class="rounded-xl mb-4">
             </section>
         </main>
     </div>
-
-    <!-- JavaScript for Theme Toggle -->
-    <script>
-        const themeToggle = document.getElementById("theme-toggle");
-        const body = document.body;
-
-        if (localStorage.getItem("theme") === "dark") {
-            body.classList.add("dark", "bg-gray-900", "text-white");
-            themeToggle.textContent = "☀️ Light Mode";
-        }
-
-        themeToggle.addEventListener("click", () => {
-            if (body.classList.contains("dark")) {
-                body.classList.remove("dark", "bg-gray-900", "text-white");
-                themeToggle.textContent = "🌙 Dark Mode";
-                localStorage.setItem("theme", "light");
-            } else {
-                body.classList.add("dark", "bg-gray-900", "text-white");
-                themeToggle.textContent = "☀️ Light Mode";
-                localStorage.setItem("theme", "dark");
-            }
-        });
-    </script>
 </body>
 </html>
