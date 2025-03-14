@@ -45,52 +45,37 @@
         <main class="w-full md:w-2/3 md:pl-8" id="portfolio">
             <h2 class="text-3xl font-bold mb-6">Portfolio</h2>
             
-            <!-- Fraud Detection Project -->
+            <!-- Telecom Customer Segmentation -->
             <section class="mb-8">
-                <h3 class="text-2xl font-semibold">Fraud Detection in Financial Transactions</h3>
-                <p class="text-gray-600 mb-4">This project identifies fraudulent transactions using data analysis and machine learning techniques.</p>
-                <a href="https://github.com/BillMuco/Fraud-Detection-Simulation" class="text-blue-600 hover:underline">Fraud Detection Simulation</a>
-                <img src="Fraud%20Detection%20Dashboard.png" alt="Fraud Detection Dashboard" class="rounded-xl mt-4" loading="lazy">
-            </section>
+                <h3 class="text-2xl font-semibold">Telecom Customer Segmentation</h3>
+                <p class="text-gray-600 mb-4">A comprehensive analysis of telecom customer behavior, focusing on subscription types, spending patterns, and segmentation.</p>
 
-            <!-- Sales Dashboard Simulation Project -->
-            <section class="mb-8">
-                <h3 class="text-2xl font-semibold">Sales Dashboard Simulation</h3>
-                <p class="text-gray-600 mb-4">This project analyzes sales performance across various regions and product categories.</p>
-                <a href="https://github.com/BillMuco/Sales-Dashboard" class="text-blue-600 hover:underline">Sales Dashboard Simulation</a>
-                <img src="Regional%20Sales%20Distribution.png" alt="Regional Sales Distribution" class="rounded-xl mt-4" loading="lazy">
+                <div class="mb-4">
+                    <h4 class="text-xl font-semibold">Customer Age Distribution</h4>
+                    <p class="text-gray-600 mb-2">This histogram shows the age range of telecom customers, helping companies tailor marketing strategies to specific demographics.</p>
+                    <img src="Customer%20Age%20distribution.png" alt="Customer Age Distribution" class="rounded-xl" loading="lazy">
+                </div>
+
+                <div class="mb-4">
+                    <h4 class="text-xl font-semibold">Monthly Spend by Customer Type</h4>
+                    <p class="text-gray-600 mb-2">This boxplot compares monthly spending between prepaid and postpaid customers to identify high-value segments.</p>
+                    <img src="Monthly%20Spend%20by%20Customer%20Type.png" alt="Monthly Spend by Customer Type" class="rounded-xl" loading="lazy">
+                </div>
+
+                <div class="mb-4">
+                    <h4 class="text-xl font-semibold">Subscription Type Breakdown</h4>
+                    <p class="text-gray-600 mb-2">A pie chart displaying the percentage of customers subscribed to prepaid vs. postpaid plans.</p>
+                    <img src="Subscription%20Breakdown.png" alt="Subscription Type Breakdown" class="rounded-xl" loading="lazy">
+                </div>
+
+                <div class="mb-4">
+                    <h4 class="text-xl font-semibold">Customer Segmentation</h4>
+                    <p class="text-gray-600 mb-2">This scatter plot groups customers based on tenure and monthly spending, helping identify customer clusters.</p>
+                    <img src="Customer%20Segmentation.png" alt="Customer Segmentation" class="rounded-xl" loading="lazy">
+                </div>
             </section>
         </main>
     </div>
-
-    <!-- Contact Form Section -->
-    <section id="contact" class="w-full md:w-2/3 mx-auto p-8 bg-white rounded-2xl shadow-lg">
-        <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
-        
-        <form id="contact-form" class="space-y-4">
-            <div>
-                <label class="block text-gray-700">Name:</label>
-                <input type="text" id="name" class="w-full p-2 border rounded" required>
-                <p class="text-red-500 text-sm hidden" id="name-error">Please enter your name.</p>
-            </div>
-
-            <div>
-                <label class="block text-gray-700">Email:</label>
-                <input type="email" id="email" class="w-full p-2 border rounded" required>
-                <p class="text-red-500 text-sm hidden" id="email-error">Please enter a valid email.</p>
-            </div>
-
-            <div>
-                <label class="block text-gray-700">Message:</label>
-                <textarea id="message" class="w-full p-2 border rounded" required></textarea>
-                <p class="text-red-500 text-sm hidden" id="message-error">Please enter a message.</p>
-            </div>
-
-            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Send Message</button>
-        </form>
-        
-        <p id="success-message" class="text-green-600 text-lg mt-4 hidden">Message sent successfully!</p>
-    </section>
 
     <!-- JavaScript for Theme Toggle -->
     <script>
@@ -111,33 +96,6 @@
                 body.classList.add("dark", "bg-gray-900", "text-white");
                 themeToggle.textContent = "☀️ Light Mode";
                 localStorage.setItem("theme", "dark");
-            }
-        });
-    </script>
-
-    <!-- JavaScript for Contact Form Validation -->
-    <script>
-        document.getElementById("contact-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            
-            let name = document.getElementById("name").value.trim();
-            let email = document.getElementById("email").value.trim();
-            let message = document.getElementById("message").value.trim();
-            
-            let nameError = document.getElementById("name-error");
-            let emailError = document.getElementById("email-error");
-            let messageError = document.getElementById("message-error");
-            let successMessage = document.getElementById("success-message");
-
-            let isValid = name && email.includes("@") && message;
-
-            nameError.classList.toggle("hidden", !!name);
-            emailError.classList.toggle("hidden", email.includes("@"));
-            messageError.classList.toggle("hidden", !!message);
-
-            if (isValid) {
-                successMessage.classList.remove("hidden");
-                this.reset();
             }
         });
     </script>
