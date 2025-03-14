@@ -6,66 +6,87 @@
     <title>Bill Godris Muco | Data Scientist & Analyst</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.5/dist/cdn.min.js" defer></script>
 
     <!-- SEO Optimization -->
     <meta name="description" content="Portfolio of Bill Godris Muco, a Data Scientist & Analyst specializing in Power BI, SQL, and AI solutions.">
     <meta property="og:title" content="Bill Godris Muco - Data Scientist & Analyst">
     <meta property="og:description" content="Data Science Portfolio showcasing Power BI dashboards, SQL projects, and AI solutions.">
-    <meta property="og:image" content="https://your-image-url.com/profile.webp">
+    <meta property="og:image" content="https://github.com/BillMuco/Portfolio/blob/main/GitHub%20Profile%20Picture.jpg">
     <meta property="og:url" content="https://billmuco.github.io/Portfolio/">
 </head>
-<body class="bg-gray-100 text-gray-900" x-data="{ darkMode: localStorage.getItem('theme') === 'dark' }" :class="{'dark bg-gray-900 text-white': darkMode}">
+<body class="bg-gray-100 text-gray-900">
     
     <!-- Navigation Bar -->
-    <nav class="bg-white dark:bg-gray-800 shadow-md p-4 flex justify-between items-center">
-        <div class="flex items-center space-x-4">
-            <button @click="darkMode = !darkMode; localStorage.setItem('theme', darkMode ? 'dark' : 'light')" class="bg-gray-200 dark:bg-gray-700 p-2 rounded">
-                🌙 / ☀️
-            </button>
-        </div>
-        <div class="md:hidden">
-            <button @click="navOpen = !navOpen" class="p-2 bg-gray-200 dark:bg-gray-700 rounded">☰</button>
-        </div>
-        <ul class="hidden md:flex space-x-6" :class="{ 'block': navOpen, 'hidden': !navOpen }">
-            <li><a href="#about" class="text-blue-600 dark:text-blue-400 hover:underline">About</a></li>
-            <li><a href="#portfolio" class="text-blue-600 dark:text-blue-400 hover:underline">Portfolio</a></li>
-            <li><a href="#contact" class="text-blue-600 dark:text-blue-400 hover:underline">Contact</a></li>
+    <nav class="bg-white shadow-md p-4 mb-4 flex justify-between items-center">
+        <ul class="flex space-x-6">
+            <li><a href="#about" class="text-blue-600 hover:underline">About</a></li>
+            <li><a href="#portfolio" class="text-blue-600 hover:underline">Portfolio</a></li>
+            <li><a href="#contact" class="text-blue-600 hover:underline">Contact</a></li>
         </ul>
+        <button id="theme-toggle" class="bg-gray-200 p-2 rounded text-gray-800">
+            🌙 Dark Mode
+        </button>
     </nav>
 
     <div class="container mx-auto p-8 flex flex-col md:flex-row">
-        <aside class="w-full md:w-1/3 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 mb-8 md:mb-0" id="about">
-            <img src="profile.webp" alt="Bill Godris Muco" class="rounded-full w-40 h-40 mx-auto mb-4">
+        <!-- Left Sidebar -->
+        <aside class="w-full md:w-1/3 bg-white rounded-2xl shadow-lg p-6 mb-8 md:mb-0" id="about">
+            <img src="GitHub%20Profile%20Picture.jpg" alt="Bill Godris Muco" class="rounded-full w-40 h-40 mx-auto mb-4">
             <h2 class="text-2xl font-bold text-center">Bill Godris Muco</h2>
-            <p class="text-center text-gray-600 dark:text-gray-300">Data Scientist & Analyst</p>
-            <p class="text-center mt-4">I specialize in SQL, Power BI, Machine Learning, and Deep Learning, helping businesses make data-driven decisions.</p>
+            <p class="text-center text-gray-600">Data Scientist & Analyst</p>
+            <p class="text-center mt-4">I specialize in SQL, Power BI, Machine Learning, and Deep Learning, helping businesses make data-driven decisions. My expertise includes geospatial analysis, NLP, and AI-driven automation.</p>
             <div class="mt-6 text-center">
-                <a href="https://www.linkedin.com/in/bill-godris-muco-977a61179/" class="text-blue-600 dark:text-blue-400 hover:underline block">LinkedIn</a>
-                <a href="https://github.com/BillMuco" class="text-blue-600 dark:text-blue-400 hover:underline block">GitHub</a>
+                <a href="https://www.linkedin.com/in/bill-godris-muco-977a61179/" class="text-blue-600 hover:underline block">LinkedIn Profile</a>
+                <a href="https://github.com/BillMuco" class="text-blue-600 hover:underline block">GitHub Profile</a>
             </div>
         </aside>
 
         <!-- Portfolio Section -->
         <main class="w-full md:w-2/3 md:pl-8" id="portfolio">
             <h2 class="text-3xl font-bold mb-6">Portfolio</h2>
+
+            <!-- Telecom Customer Analysis -->
             <section class="mb-8">
                 <h3 class="text-2xl font-semibold">Telecom Customer Analysis</h3>
-                <img src="customer-age.webp" alt="Customer Age Distribution" class="rounded-xl mb-4">
-                <img src="customer-segmentation.webp" alt="Customer Segmentation" class="rounded-xl mb-4">
+                <p class="text-gray-600 mb-4">A deep dive into telecom customer behavior, including age distribution, segmentation, and spending trends.</p>
+                <img src="Customer%20Age%20distribution.png" alt="Customer Age Distribution" class="rounded-xl mb-4">
+                <p>Distribution of customer ages in telecom services, showcasing tenure years by age.</p>
+                <img src="Customer%20Segmentation.png" alt="Customer Segmentation" class="rounded-xl mb-4">
+                <p>Classification of customers into high, low, and mid-value segments based on their spending.</p>
+                <img src="Monthly%20Spend%20by%20Customer%20Type.png" alt="Monthly Spend by Customer Type" class="rounded-xl mb-4">
+                <p>Comparison of monthly spending patterns between postpaid and prepaid customers.</p>
+                <img src="Subscription%20Breakdown.png" alt="Subscription Type Breakdown" class="rounded-xl mb-4">
+                <p>Percentage distribution of customers by their subscription type (Postpaid vs. Prepaid).</p>
+            </section>
+
+            <!-- Fraud Detection Analysis -->
+            <section class="mb-8">
+                <h3 class="text-2xl font-semibold">Fraud Detection Analysis</h3>
+                <p class="text-gray-600 mb-4">Analysis of fraudulent transactions and anomaly detection.</p>
+                <img src="Fraud%20Detection%20Dashboard.png" alt="Fraud Detection Dashboard" class="rounded-xl mb-4">
+                <p>Dashboard showcasing fraud detection metrics, including transaction counts and risk levels.</p>
+                <img src="Fraud%20Vs.%20Non-Fraud%20Transaction%20Count.png" alt="Fraud vs. Non-Fraud Transaction Count" class="rounded-xl mb-4">
+                <p>Comparison of fraudulent and non-fraudulent transactions by type.</p>
+                <img src="Anomaly%20Detection.png" alt="Anomaly Detection" class="rounded-xl mb-4">
+                <p>Identification of anomalous transaction patterns based on transaction amount and frequency.</p>
+                <img src="High-Risk%20Transaction%20Types.png" alt="High-Risk Transaction Types" class="rounded-xl mb-4">
+                <p>Breakdown of transaction types most likely associated with fraud risk.</p>
+                <img src="Transaction%20Amount%20Distribution.png" alt="Transaction Amount Distribution" class="rounded-xl mb-4">
+                <p>Distribution of transaction amounts across different payment methods.</p>
+            </section>
+
+            <!-- GIS and Traffic Flow Analysis -->
+            <section class="mb-8">
+                <h3 class="text-2xl font-semibold">GIS and Traffic Flow Analysis</h3>
+                <p class="text-gray-600 mb-4">Geospatial traffic flow and regional business activity visualization.</p>
+                <img src="GIS%20Traffic%20Flow%20interactive%20Map%20ArcGIS.png" alt="GIS Traffic Flow Interactive Map" class="rounded-xl mb-4">
+                <p>Interactive map displaying real-time traffic flow using ArcGIS.</p>
+                <img src="Regional%20Business%20activity%20bubble%20map%20based%20on%20traffic%20Flow.png" alt="Regional Business Activity Bubble Map" class="rounded-xl mb-4">
+                <p>Visualization of business activity across regions based on traffic data.</p>
+                <img src="Traffic%20Flow%20Heatmap%20by%20Longitude%20and%20Latitude.png" alt="Traffic Flow Heatmap" class="rounded-xl mb-4">
+                <p>Heatmap representation of traffic flow intensity across various locations.</p>
             </section>
         </main>
     </div>
-
-    <!-- Contact Form -->
-    <section id="contact" class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md w-2/3 mx-auto mt-12">
-        <h2 class="text-3xl font-bold mb-4 text-center">Contact Me</h2>
-        <form action="https://formspree.io/f/mnqywprq" method="POST" class="space-y-4">
-            <input type="text" name="name" placeholder="Your Name" class="w-full p-3 border rounded-lg">
-            <input type="email" name="email" placeholder="Your Email" class="w-full p-3 border rounded-lg">
-            <textarea name="message" placeholder="Your Message" class="w-full p-3 border rounded-lg"></textarea>
-            <button type="submit" class="bg-blue-600 text-white p-3 rounded-lg w-full">Send Message</button>
-        </form>
-    </section>
 </body>
 </html>
